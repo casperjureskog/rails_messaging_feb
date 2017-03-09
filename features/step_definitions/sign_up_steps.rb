@@ -8,9 +8,6 @@ end
 
 Then(/^I fill in "([^"]*)" with "([^"]*)"$/) do |title, content|
   fill_in title, with: content
-  fill_in title, with: content
-  fill_in title, with: content
-  fill_in title, with: content
 end
 
 Then(/^I click Create$/) do
