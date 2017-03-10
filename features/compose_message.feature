@@ -24,7 +24,4 @@ Scenario: As I login
   Then I should see "Your message was successfully sent!"
   And I click "Sent"
   And I should see "felix"
-  And I click "View"
-  And I click "Move to trash"
-  Then I click "Trash"
-  And I should see "felix"
+  
