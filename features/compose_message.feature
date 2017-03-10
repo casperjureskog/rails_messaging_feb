@@ -1,6 +1,6 @@
 Feature: As a visitor.
-  So that I can use the service.
-  I would like to be able to go to login page and login on my account.
+  So that I can remove my message.
+
 
 Background:
 Given the following users exist
@@ -24,4 +24,7 @@ Scenario: As I login
   Then I should see "Your message was successfully sent!"
   And I click "Sent"
   And I should see "felix"
-  
+  And I click "View"
+  And I click "Move to trash"
+  Then I click "Trash"
+  And I should see "felix"
