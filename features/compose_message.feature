@@ -1,6 +1,5 @@
 Feature: As a visitor.
-  So that I can use the service.
-  I would like to be able to go to login page and login on my account.
+  I would like to be able to go to the  inbox and fil in and compose a message.
 
 Background:
 Given the following users exist
