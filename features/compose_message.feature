@@ -1,5 +1,6 @@
 Feature: As a visitor.
-  I would like to be able to go to the  inbox and fil in and compose a message.
+   in order to talk with a friend
+   I would like to compose and send a message
 
 Background:
 Given the following users exist
@@ -7,14 +8,18 @@ Given the following users exist
 | felix | felix@telia.com   | fisk1234     |
 | fabbe | fabian@telia.com  | fabbe1234    |
 
-Scenario: As I login
-   Scenario: If I am logged in
-   Given I am logged in as "felix"
-   And I am on the index page
-   And I click "Inbox"
-   And I click "Compose"
-   And I select "fabbe" from "Recipients"
-   And I fill in "Subject" with "subject"
-   And I fill in "Type your message here" with "Message"
-   Then I click "Send Message"
 
+   Scenario: If i send a message
+      Given I am logged in as "felix"
+      And I am on the index page
+      And I click "Inbox"
+      And I click "Compose"
+      And I select "fabbe" from "Recipients"
+      And I fill in "Subject" with "subject"
+      And I fill in "Type your message here" with "Message"
+      And I click "Send Message"
+      And I click "Logout"
+      And I am logged in as "fabbe"
+      And I am on the index page
+      And I click "Inbox"
+      Then "fabbe" should have "1" message
